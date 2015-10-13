@@ -1,0 +1,30 @@
+extends layout
+block content
+
+  a(href='/page2') page2
+  a(href='/page3') page3
+
+  #container.container
+    img.aspect(src='images/layer2.png')
+    ul#scene.scene.border.fill(style='transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden;')
+      li.layer.expand-width(data-depth='2.00', style='transform: translate3d(61.723px, -65.1672px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;')
+        buttonlayer[6]
+      li.layer.expand-width(data-depth='3.00', style='transform: translate3d(49.3784px, -52.1338px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;')
+        button layer[5]
+      li.layer.expand-width(data-depth='4.00', style='transform: translate3d(37.0338px, -39.1003px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;')
+        button layer[4]
+      li.layer.expand-width(data-depth='5.00', style='transform: translate3d(24.6892px, -26.0669px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;')
+        button layer[3]
+      li.layer.expand-width(data-depth='6.00', style='transform: translate3d(12.3446px, -13.0334px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;')
+        button layer[2]
+      li.layer.expand-width(data-depth='7.00', style='transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;')
+        button layer[1]
+  // Scripts
+  script(src='../parallax.js')
+  script.
+    // Nothing new here...it's all in the CSS!
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
+
+
+
